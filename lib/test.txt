@@ -1,0 +1,52 @@
+pw.Table(border: pw.TableBorder.all(), children: [
+              pw.TableRow(children: [
+                pw.Container(
+                    width: 1, // Set the width of the cell
+
+                    child: pw.Table(border: pw.TableBorder.all(), children: [
+                      pw.TableRow(children: [
+                        pw.Container(
+                            alignment: pw.Alignment.bottomLeft,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                                children: [
+                                  pw.Column(children: [pw.Text('Basic')]),
+                                  
+                                ])),
+                        pw.Container(
+                            alignment: pw.Alignment.bottomRight,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.end,
+                                children: [
+                                  
+                                  pw.Column(children: [pw.Text('1')]),
+                                ]))
+                      ])
+                    ])),
+                pw.Container(width: 0.1, child: pw.Column()),
+                pw.Container(
+                    width: 1, // Set the width of the cell
+
+                    child: pw.Table(children: [
+                      pw.TableRow(children: [
+                        pw.Container(
+                            alignment: pw.Alignment.bottomLeft,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                                children: [
+                                  
+                                  pw.Column(
+                                      children: [pw.Text('Total Deductions')]),
+                                ])),
+                        pw.Container(
+                            alignment: pw.Alignment.bottomRight,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.end,
+                                children: [
+                                  
+                                  pw.Column(children: [pw.Text('20')]),
+                                ]))
+                      ])
+                    ])),
+              ])
+            ]),

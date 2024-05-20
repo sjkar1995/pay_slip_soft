@@ -17,906 +17,201 @@ class PdfGenerator {
         pageFormat: PdfPageFormat.a4,
         build: (pw.Context context) {
           return pw.Column(children: [
-            pw.Container(
-              alignment: pw.Alignment.center,
-              child: pw.Text(
-                'NATIONAL INSTITUTE OF TB & RESPI. DISEASES',
-                style:
-                    pw.TextStyle(fontSize: 16, fontWeight: pw.FontWeight.bold),
-              ),
-            ),
-            pw.SizedBox(height: 5), // Spacer
-            pw.Container(
-              alignment: pw.Alignment.center,
-              child: pw.Text(
-                'NEW DELHI - 110030',
-                style: pw.TextStyle(fontSize: 12),
-              ),
-            ),
-            pw.SizedBox(height: 5), // Space
-            pw.Container(
-              alignment: pw.Alignment.center,
-              child: pw.Text(
-                'Payslip for the month of Feb 2024',
-                style: pw.TextStyle(fontSize: 12),
-              ),
-            ),
-            pw.SizedBox(height: 20), // Spacer
+            pw.Column(children: [
+              pw.Text('NATIONAL INSTITUTE OF TB & RESPI. DISEASES',
+                  style: pw.TextStyle(
+                      fontSize: 14, fontWeight: pw.FontWeight.bold))
+            ]),
+            pw.Column(children: [
+              pw.Text('NEW DELHI - 110030',
+                  style: pw.TextStyle(
+                      fontSize: 14, fontWeight: pw.FontWeight.bold))
+            ]),
+            pw.Column(children: [
+              pw.Text('Payslip for the month of Feb 2024',
+                  style: pw.TextStyle(
+                      fontSize: 14, fontWeight: pw.FontWeight.bold))
+            ]),
+
             pw.Table(border: null, children: [
               pw.TableRow(
                 children: [
-                  pw.Container(
-                    width: 50, // Set the width of the cell
-                    height: 15, // Set the height of the cell
-                    alignment: pw.Alignment.centerLeft,
-                    child: pw.Text('Code', style: pw.TextStyle(fontSize: 12)),
-                  ),
-                  pw.Container(
-                    width: 100, // Set the width of the cell
-                    height: 15, // Set the height of the cell
-                    alignment: pw.Alignment.centerLeft,
-                    child:
-                        pw.Text('XXXXXXX', style: pw.TextStyle(fontSize: 12)),
-                  ),
-                  pw.Container(
-                    width: 60, // Set the width of the cell
-                    height: 15, // Set the height of the cell
-                    alignment: pw.Alignment.centerLeft,
-                    child: pw.Text('Name:'),
-                  ),
-                  pw.Container(
-                    width: 150, // Set the width of the cell
-                    height: 15, // Set the height of the cell
-                    alignment: pw.Alignment.centerLeft,
-                    child: pw.Text('XXXXX', style: pw.TextStyle(fontSize: 12)),
-                  ),
-                  pw.Container(
-                    width: 60, // Set the width of the cell
-                    height: 15, // Set the height of the cell
-                    alignment: pw.Alignment.centerLeft,
-                    child:
-                        pw.Text('Desig. :', style: pw.TextStyle(fontSize: 12)),
-                  ),
-                  pw.Container(
-                    width: 100, // Set the width of the cell
-                    height: 15, // Set the height of the cell
-                    alignment: pw.Alignment.centerLeft,
-                    child: pw.Text('XXXXXX', style: pw.TextStyle(fontSize: 12)),
-                  ),
-                  pw.SizedBox(height: 20), // Spacer
+                  pw.Text("Code:", style: pw.TextStyle(fontSize: 12)),
+                  pw.Text('619875', style: pw.TextStyle(fontSize: 12)),
+                  pw.Text('Name:', style: pw.TextStyle(fontSize: 12)),
+                  pw.Text('satyajeet kar'),
+                  pw.Text('Desig. :', style: pw.TextStyle(fontSize: 12)),
+                  pw.Text('computer engineer',
+                      style: pw.TextStyle(fontSize: 12)),
                 ],
               ),
               pw.TableRow(
                 children: [
-                  pw.Container(
-                    width: 150, // Set the width of the cell
-                    height: 15, // Set the height of the cell
-                    alignment: pw.Alignment.bottomLeft,
-                    child:
-                        pw.Text('NPS-CODE', style: pw.TextStyle(fontSize: 12)),
-                  ),
-                  pw.Container(
-                    width: 100, // Set the width of the cell
-                    height: 15, // Set the height of the cell
-                    alignment: pw.Alignment.bottomLeft,
-                    child: pw.Text('XXXXX', style: pw.TextStyle(fontSize: 12)),
-                  ),
-                  pw.Container(
-                    width: 150, // Set the width of the cell
-                    height: 15, // Set the height of the cell
-                    alignment: pw.Alignment.bottomLeft,
-                    child: pw.Text('Pay Level'),
-                  ),
-                  pw.Container(
-                    width: 150, // Set the width of the cell
-                    height: 15, // Set the height of the cell
-                    alignment: pw.Alignment.bottomLeft,
-                    child:
-                        pw.Text('XXXXXXX', style: pw.TextStyle(fontSize: 12)),
-                  ),
+                  pw.Text("NPS-CODE", style: pw.TextStyle(fontSize: 12)),
+                  pw.Text('h2o', style: pw.TextStyle(fontSize: 12)),
+                  pw.Text(''),
+                  pw.Text(''),
+                  pw.Text('Pay Level', style: pw.TextStyle(fontSize: 12)),
+                  pw.Text('01', style: pw.TextStyle(fontSize: 12)),
                 ],
               ),
             ]),
-
-            pw.SizedBox(height: 10), // Spacer
             pw.Container(
-              alignment: pw.Alignment.centerLeft,
-              child: pw.Text(
-                '------------------------------------------------------------------------------------------------------------------------',
-                style: pw.TextStyle(fontSize: 12),
-              ),
-            ),
-
-            pw.Container(
-              alignment: pw.Alignment.centerLeft,
-              child: pw.Text(
-                'Earnings                                                              Deductions',
-                style: pw.TextStyle(fontSize: 12),
-              ),
-            ),
-            pw.Container(
-              alignment: pw.Alignment.centerLeft,
-              child: pw.Text(
-                '------------------------------------------------------------------------------------------------------------------------',
-                style: pw.TextStyle(fontSize: 12),
-              ),
-            ),
-
-            pw.Table(
-              border: null, //pw.TableBorder.all()
-              children: [
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('Basic', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Pf-Subscription',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text('', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Pf-Advance',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('N.P.A', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Car/Vehicle loan',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('D.A', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Festival loan',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('P.C.A ', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('G.L.I.S', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('O.T.A', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Income Tax',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('H.R.A', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Electric Charges',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Conveyance',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Water Charges',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Washing Allownance',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Licence fee',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Dress Allownance',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Emp. Pf-contribution',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('Adhoc', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('E.H.S', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('A.R.P', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Leav Ded',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('P.G Allownance',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('NPS-Subscription',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Nursing Allownance',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('Others', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('10000', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Spl. Pay',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text('', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Leav Pay',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text(
-                          '___________________________________________',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text('_____________________',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child:
-                          pw.Text('Others ', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child:
-                          pw.Text('62500', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('Total Deductions',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text('900', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text(
-                          '_________________________________________________',
-                          style: pw.TextStyle(fontSize: 8)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(
-                          '____________________________________________',
-                          style: pw.TextStyle(fontSize: 8)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text('____________________________________',
-                          style: pw.TextStyle(fontSize: 8)),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('____________________________________',
-                          style: pw.TextStyle(fontSize: 8)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text('____________________________________',
-                          style: pw.TextStyle(fontSize: 8)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.bottomLeft,
-                      child: pw.Text('Gross Pay',
-                          style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.bottomRight,
-                      child: pw.Text('300', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.bottomLeft,
-                      child: pw.Text(''),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.bottomLeft,
-                      child:
-                          pw.Text('Net Pay', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.bottomRight,
-                      child: pw.Text('100', style: pw.TextStyle(fontSize: 12)),
-                    ),
-                  ],
-                ),
-                pw.TableRow(
-                  children: [
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text(
-                          '_________________________________________________',
-                          style: pw.TextStyle(fontSize: 8)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text(
-                          '____________________________________________',
-                          style: pw.TextStyle(fontSize: 8)),
-                    ),
-                    pw.Container(
-                      width: 40, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text('____________________________________',
-                          style: pw.TextStyle(fontSize: 8)),
-                    ),
-                    pw.Container(
-                      width: 150, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerLeft,
-                      child: pw.Text('____________________________________',
-                          style: pw.TextStyle(fontSize: 8)),
-                    ),
-                    pw.Container(
-                      width: 100, // Set the width of the cell
-                      height: 15, // Set the height of the cell
-                      alignment: pw.Alignment.centerRight,
-                      child: pw.Text('____________________________________',
-                          style: pw.TextStyle(fontSize: 8)),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+                decoration: pw.BoxDecoration(border: pw.Border.all()),
+                child: pw.Text(
+                  ' Earnings                                                                Deductions                                               ',
+                )),
 
             pw.Table(border: null, children: [
               pw.TableRow(children: [
                 pw.Container(
-                    width: 50, // Set the width of the cell
-                    height: 100,
-                    child: pw.Text("Remarks")),
+                    width: 1, // Set the width of the cell
+
+                    child: pw.Table(border: null, children: [
+                      pw.TableRow(children: [
+                        pw.Container(
+                            alignment: pw.Alignment.bottomLeft,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                                children: [
+                                  pw.Column(children: [pw.Text('Basic')]),
+                                  pw.Column(children: [pw.Text('D.A')]),
+                                  pw.Column(children: [pw.Text('P.C.A')]),
+                                  pw.Column(children: [pw.Text('O.T.A')]),
+                                  pw.Column(children: [pw.Text('H.R.A')]),
+                                  pw.Column(children: [pw.Text('Conveyance')]),
+                                  pw.Column(children: [
+                                    pw.Text('Washing Allownance')
+                                  ]),
+                                  pw.Column(
+                                      children: [pw.Text('Dress Allownance')]),
+                                  pw.Column(children: [pw.Text('Adhoc')]),
+                                  pw.Column(children: [pw.Text('A.R.P')]),
+                                  pw.Column(
+                                      children: [pw.Text('P.G Allownance')]),
+                                  pw.Column(children: [
+                                    pw.Text('Nursing Allownance')
+                                  ]),
+                                  pw.Column(children: [pw.Text('Spl. Pay ')]),
+                                  pw.Column(children: [pw.Text('Leav Pay ')]),
+                                  pw.Column(children: [pw.Text('Others')]),
+                                ])),
+                        pw.Container(
+                            alignment: pw.Alignment.bottomRight,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.end,
+                                children: [
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                ]))
+                      ])
+                    ])),
+                pw.Container(width: 0.1, child: pw.Column()),
                 pw.Container(
-                    width: 400, // Set the width of the cell
-                    height: 100,
-                    child: pw.Text(""))
+                    width: 1, // Set the width of the cell
+
+                    child: pw.Table(children: [
+                      pw.TableRow(children: [
+                        pw.Container(
+                            alignment: pw.Alignment.bottomLeft,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                                children: [
+                                  pw.Column(
+                                      children: [pw.Text('Pf-Subscription')]),
+                                  pw.Column(children: [pw.Text('Pf-Advance')]),
+                                  pw.Column(
+                                      children: [pw.Text('Car/Vehicle loan')]),
+                                  pw.Column(
+                                      children: [pw.Text('Festival loan')]),
+                                  pw.Column(children: [pw.Text('G.L.I.S ')]),
+                                  pw.Column(children: [pw.Text('Income Tax')]),
+                                  pw.Column(
+                                      children: [pw.Text('Electric Charges')]),
+                                  pw.Column(
+                                      children: [pw.Text('Water Charges')]),
+                                  pw.Column(
+                                      children: [pw.Text('Licence fee ')]),
+                                  pw.Column(children: [
+                                    pw.Text('Emp. Pf-contribution')
+                                  ]),
+                                  pw.Column(children: [pw.Text('E.H.S')]),
+                                  pw.Column(children: [pw.Text('Leav Ded')]),
+                                  pw.Column(
+                                      children: [pw.Text('NPS-Subscription')]),
+                                  pw.Column(children: [pw.Text('Others')]),
+                                  pw.Column(
+                                      children: [pw.Text('Total Deductions')]),
+                                ])),
+                        pw.Container(
+                            alignment: pw.Alignment.bottomRight,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.end,
+                                children: [
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('1000')]),
+                                  pw.Column(children: [pw.Text('2')]),
+                                  pw.Column(children: [pw.Text('20')]),
+                                ]))
+                      ])
+                    ])),
+              ])
+            ]),
+            pw.Container(
+              decoration: pw.BoxDecoration(border: pw.Border.all()),
+              child: pw.Table(children: [
+                pw.TableRow(children: [
+                  pw.Container(
+                      width: 1,
+                      alignment: pw.Alignment.centerLeft,
+                      child: pw.Text('Gross Pay')),
+                  pw.Container(
+                      width: 1,
+                      alignment: pw.Alignment.centerRight,
+                      child: pw.Text('Gross Pay')),
+                  pw.Container(
+                      width: 0.2,
+                      alignment: pw.Alignment.topCenter,
+                      child: pw.Text('')),
+                  pw.Container(
+                      width: 1,
+                      alignment: pw.Alignment.centerLeft,
+                      child: pw.Text('Gross Pay')),
+                  pw.Container(
+                      width: 1,
+                      alignment: pw.Alignment.centerRight,
+                      child: pw.Text('Gross Pay')),
+                ])
+              ]),
+            ),
+            pw.Table(border: null, children: [
+              pw.TableRow(children: [
+                pw.Container(width: 50, height: 100, child: pw.Text("Remarks")),
+                pw.Container(width: 400, height: 100, child: pw.Text(""))
               ])
             ])
             //pw.column
@@ -932,12 +227,11 @@ class PdfGenerator {
   }
 }
 
-
 // N.P.A 0 Car/Vehicle loan 0
 // D.A   0   Festival loan 0
 // Transportation 0 H.B.A  0
 
-// P.C.A 0 G.L.I.S   0                                                        
+// P.C.A 0 G.L.I.S   0
 // O.T.A 0 Income Tax 0
 // H.R.A 0 Electric Charges 0
 // Conveyance 0 Water Charges 0
@@ -950,4 +244,3 @@ class PdfGenerator {
 // Spl. Pay           0
 // Leav Pay           0
 // Others             0
-          
